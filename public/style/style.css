@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+body{
+  background-color:white;
+  font-family: "Righteous";
+  color: 'black';
+}
+
+
+.label{
+    height:100%;
+    width: 100%;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+    font-family: 'Rubik';
+}
+
+
+
+.list a{
+  color: white;
+}
+
+.link-box a{
+    color: white;
+}
+
+.left-show{
+    height: 100vh;
+    width: 100%;
+}
+
+.login{
+    background-color: white;
+    font-size: 1.2em;
+    width: 400px;
+}
+
+#login a{
+    color: purple;
+    font-size: 15px;
+}
+
+
+.login-bg{
+    background-color: #ff7700;
+    background-size: cover;
+    background-image: url('f-t.svg');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.rank-bg{
+    background-color: #ff7700;
+    background-size: cover;
+    background-image: url('f-t.svg');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button-switch{
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 1.2em;
+}
+
+.squared{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 15px;
+    width: 400px;
+}
+
+.login-box{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #E1E8ED;
+    padding: 20px;
+}
+
+.squared-box{
+    height:100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #E1E8ED;
+    padding: 20px;
+}
+
+.link-box{
+    height:100%;
+    width: 100%;
+    background-color: darkred;
+    border: 1px solid #E1E8ED;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mini-link-box{
+    height:100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #E1E8ED;
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.mini-t{
+    flex: 10
+}
+
+.mini-glyph{
+    flex:2
+}
+
+
+
+
+.link-container{
+
+}
+
+
+
+
+
+
+
+.result-label{
+    background-color: #4267B2;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    height:100%;
+    width: 100vh;
+    margin-top: 10px;
+}
+
+.done-label{
+    background-color: white;
+    color: #4267B2;
+    font-size: 20px;
+    padding: 20px;
+    height:100%;
+    width: 100%;
+}
+
+.title{
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rank-title{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.center-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bg-login{
+    width: 100vh;
+    height: 100vh;
+    z-index: -1;
+}
+
+.err-msg{
+    color: red;
+    font-size: 15px;
+}
+
+.success-msg{
+    color: purple;
+    font-size: 15px;
+}
+
+.checked-done{
+    height: 150px;
+    width: 150px;
+  }
+
+
+.contest-items{
+    border: 1px solid #E1E8ED;
+    border-radius: 2px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.list-container{
+    margin: 8px;
+    border: 1px solid #E1E8ED;
+    border-radius: 2px;
+}
+
+.list-title{
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contest-list{
+    padding: 8px;
+}
