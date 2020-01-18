@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import { Row, Col, FormGroup, ControlLabel, FormControl } from 'react-bootstrap'
+import { Row, Col, FormGroup, FormControl, Form } from 'react-bootstrap'
 import { Button } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
@@ -112,7 +112,7 @@ export default class ForgotPassword extends React.Component {
             <Row className="justify-content-md-center">
                 <Col lg={6} md={6} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Email
                         {this.state.email_err ? (
                             <span className="err-msg">
@@ -122,7 +122,7 @@ export default class ForgotPassword extends React.Component {
                                 <div/>
                         )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       type="email"
                       id="email"

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { Row, Col, Glyphicon } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
@@ -20,7 +20,6 @@ export default class AdminBucket extends React.Component {
         this.setState({ 
           isLoading: true
         })
-
 
         try {
           const res = await fetch('http://127.0.0.1:8000/api/my_admin/')
@@ -61,7 +60,7 @@ export default class AdminBucket extends React.Component {
                         <Link to={`/rank/${ item.url }`}>
                         <div className="mini-link-box">
                             <p className="mini-t">{item.firstname} {item.lastname}</p>
-                            <Glyphicon className="mini-glyph" glyph="arrow-right"/>
+                            <div className="mini-glyph" glyph="arrow-right"/>
                         </div>
                       </Link>
                       ))}

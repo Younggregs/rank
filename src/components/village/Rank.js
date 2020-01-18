@@ -2,14 +2,14 @@ import React from 'react'
 import initialData from './neighborhoods/data'
 import Column from './neighborhoods/column'
 import {DragDropContext} from 'react-beautiful-dnd'
-import { Row, Col } from 'react-bootstrap'
-import { Button, Progress } from 'reactstrap'
+import { Row, Col, Button, Container } from 'react-bootstrap'
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 import lottie from "lottie-web";
 import RankTitle from './neighborhoods/rank title'
 import RankContestants from './neighborhoods/rank contestants'
 import RankPercentage from './neighborhoods/rank percentage'
+import AppName from './neighborhoods/App Name'
 
 
 
@@ -95,14 +95,16 @@ export default class Rank extends React.Component {
       render() {
 
             return (
+                  <Container fluid="true">
+                        <AppName/>   
                   <section className="rank-bg">
                   <Row>
                   <Col lg={6} md={6} sm={12} xs={12}>
                   <section className="squared">
                         <div className="label">
-                              RankTank
+                              Rank Contestants
                         </div>
-                  <div className="title">Rank Contestants</div>
+                  <div className="title">Rank Contestants from highest to lowest</div>
                   <RankTitle rank_id={this.props.match.params.rank_id}/>
                   <RankContestants rank_id={this.props.match.params.rank_id}/>
 
@@ -136,7 +138,7 @@ export default class Rank extends React.Component {
                   <Row className="justify-content-md-center">
                   <Col lg={8} md={8} sm={12} xs={12}>
                       <br />
-                        <Button onClick={this.submit.bind(this)} color="primary" size="lg">Submit</Button>{' '}
+                        <Button onClick={this.submit.bind(this)} variant="success" size="lg">Submit</Button>{' '}
                       <br />
                       <br />
                   </Col>
@@ -149,6 +151,7 @@ export default class Rank extends React.Component {
               
 
             </section>
+            </Container>
             
       )}
 }

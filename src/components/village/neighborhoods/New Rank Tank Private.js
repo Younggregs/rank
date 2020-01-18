@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Redirect, Link } from 'react-router-dom'
-import { Row, Col, FormGroup, ControlLabel, FormControl, Alert } from 'react-bootstrap'
-import { Collapse, Button, ButtonGroup, ButtonToolbar, CardBody, Card, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Row, Col, FormGroup, Button, Form, FormControl, Alert } from 'react-bootstrap'
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -30,17 +30,19 @@ export default class NewRankTank extends React.Component {
           email_err: false
         })
 
+        const auth = localStorage.getItem('auth_code')
+
 
         var proceed = false
         //const auth_code = localStorage.getItem('auth_code') 
   
         var formData = new FormData()
 
-        var name = document.getElementById("name").value
+        var title = document.getElementById("title").value
         var contestants = document.getElementById("contestants").value
         var email_list = document.getElementById("email_list").value
 
-        if(name){
+        if(title){
 
           if(contestants){
 
@@ -67,7 +69,7 @@ export default class NewRankTank extends React.Component {
         
         if(proceed){
   
-        formData.append('name', name)
+        formData.append('title', title)
         formData.append('contestants', contestants)
         formData.append('email_list', email_list)
 
@@ -76,6 +78,10 @@ export default class NewRankTank extends React.Component {
           const res = await fetch('http://127.0.0.1:8000/api/new_private_contest/', {
            body : formData,
            method: 'POST',
+           headers : {
+            'Authorization' : 'Token ' + auth,
+          },
+
           })
           const message = await res.json();
             this.setState({
@@ -125,21 +131,23 @@ export default class NewRankTank extends React.Component {
 
             return (
                 <section>
-                    <Button color="danger" size="lg" block style={{ marginBottom: '1rem' }}>Create RankTank</Button>
+                    <Button variant="warning" size="lg" block style={{ marginBottom: '1rem' }}>Create RankTank</Button>
 
                   <div className="button-switch">
-                    <Link to='/new_rank_private'>
-                        <Button color="primary" size="lg" block>Private</Button>
-                    </Link>
+                    
                     <Link to='/new_rank'>
-                        <Button outline color="primary" size="lg" block>Public</Button>
+                        <Button variant="outline-info" size="lg" block>Public</Button>
                     </Link>
+                    <Link to='/new_rank_private'>
+                        <Button variant="info" size="lg" block>Private</Button>
+                    </Link>
+
                   </div>
 
                   <Row className="justify-content-md-center">
                   <Col lg={10} md={10} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Title
                         {this.state.name_err ? (
                             <span className="err-msg">
@@ -149,11 +157,11 @@ export default class NewRankTank extends React.Component {
                                 <div/>
                         )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       type="text"
-                      id="name"
-                      name="name"
+                      id="title"
+                      name="title"
                     />
                   </FormGroup>
                </Col>
@@ -164,7 +172,7 @@ export default class NewRankTank extends React.Component {
             <Row className="justify-content-md-center">
                 <Col lg={10} md={10} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Contestants
                         {this.state.contestants_err ? (
                             <span className="err-msg">
@@ -174,7 +182,7 @@ export default class NewRankTank extends React.Component {
                                 <div/>
                         )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       componentClass="textarea"
                       id="contestants"
@@ -191,7 +199,7 @@ export default class NewRankTank extends React.Component {
             <Row className="justify-content-md-center">
                 <Col lg={10} md={10} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Voters email list
                         {this.state.email_err ? (
                             <span className="err-msg">
@@ -201,7 +209,7 @@ export default class NewRankTank extends React.Component {
                                 <div/>
                         )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       componentClass="textarea"
                       id="email_list"
@@ -235,7 +243,7 @@ export default class NewRankTank extends React.Component {
                 ) : ( 
                   <Col lg={4} lgOffset={5} md={4} mdOffset={5} sm={12} xs={12}>
                   <br />
-                     <Button onClick={this.submit.bind(this)} color="danger" size="lg">Submit</Button>{' '}
+                     <Button onClick={this.submit.bind(this)} variant="success" size="lg">Submit</Button>{' '}
                   <br />
                   <br />
                 </Col>

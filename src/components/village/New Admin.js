@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Redirect } from 'react-router-dom'
-import { Row, Col, FormGroup, ControlLabel, FormControl } from 'react-bootstrap'
+import { Row, Col, FormGroup, FormControl } from 'react-bootstrap'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { Row, Col, FormGroup, Form, Button, FormControl } from 'react-bootstrap'
+import { Row, Col, FormGroup, Button, Form, FormControl } from 'react-bootstrap'
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 import lottie from 'lottie-web';
 import { login } from './auth/Auth'
 
-export default class Login extends React.Component {
+export default class Signup extends React.Component {
 
 
     state = {
@@ -50,16 +50,31 @@ export default class Login extends React.Component {
 
         var email = document.getElementById("email").value
         var password = document.getElementById("password").value
+        var firstname = document.getElementById("firstname").value
+        var lastname = document.getElementById("lastname").value
 
         if(email){
 
-          if(password){
+            if(password){
 
-                proceed = true
+                if(firstname){
 
-          }else{
-            this.setState({password_err: true})
-          }
+                    if(lastname){
+
+                        proceed = true
+
+
+                    }else{
+                        this.setState({lastname: true})
+                    }
+
+                }else{
+                    this.setState({firstname_err: true})
+                }
+   
+            }else{
+                this.setState({password_err: true})
+            }
 
         }else{
           this.setState({email_err: true})
@@ -74,11 +89,13 @@ export default class Login extends React.Component {
 
   
         formData.append('email', email)
-        formData.append('password', password )
+        formData.append('password', password)
+        formData.append('firstname', firstname)
+        formData.append('lastname', lastname)
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/signin/', {
+          const res = await fetch('http://127.0.0.1:8000/api/signup/', {
            body : formData,
            method: 'POST',
           })
@@ -93,6 +110,7 @@ export default class Login extends React.Component {
         }
 
       }
+      
         login(email, password)
         this.setState({ isLoading: false })
   
@@ -116,20 +134,73 @@ export default class Login extends React.Component {
                     </div>
                     <div className="login-box">
                       <div className="title">Login</div>
+                    
+
+
+
             <Row className="justify-content-md-center">
             <Col lg={6} md={6} sm={12} xs={12}> 
             <Link to="/">
-              <Button variant="success">Signin</Button>
+              <Button variant="outline-success">Signin</Button>
             </Link>
             </Col>
 
             <Col lg={6} md={6} sm={12} xs={12}> 
             <Link to="/signup">
-              <Button variant="outline-info">Signup</Button>
+              <Button variant="info">Signup</Button>
             </Link>
             </Col>
             </Row>
-                    
+
+
+
+
+                <Row className="justify-content-md-center">
+                <Col lg={6} md={6} sm={12} xs={12}>
+                  <FormGroup controlId="formControlsTextarea">
+                    <Form.Label>
+                        <div className="form-label"> First Name
+                        {this.state.email_err ? (
+                            <span className="err-msg">
+                                **
+                            </span>
+                            ) : (
+                                <div/>
+                        )}
+                        </div>
+                    </Form.Label>
+                    <FormControl
+                      type="firstname"
+                      id="firstname"
+                      name="firstname"
+                    />
+                  </FormGroup>
+               </Col>
+         
+               <Col lg={6} md={6} sm={12} xs={12}>
+                  <FormGroup controlId="formControlsTextarea">
+                    <Form.Label>
+                        <div className="form-label"> Last Name
+                        {this.state.password_err ? (
+                            <span className="err-msg">
+                                **
+                            </span>
+                            ) : (
+                                <div/>
+                            )}
+                        </div>
+                    </Form.Label>
+                    <FormControl
+                      type="text"
+                      id="lastname"
+                      name="firstname"
+                      cols={5}
+                    />
+                  </FormGroup>
+               </Col>
+            </Row>
+
+
                
             
 

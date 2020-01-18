@@ -29,6 +29,10 @@ body{
     font-family: 'Rubik';
 }
 
+#label a{
+    color: white;
+}
+
 
 
 .list a{
@@ -99,7 +103,7 @@ body{
     justify-content: center;
     background-color: white;
     font-size: 15px;
-    width: 400px;
+    width: 100vh;
 }
 
 .login-box{
@@ -172,6 +176,19 @@ body{
     width: 100vh;
     margin-top: 10px;
 }
+
+
+
+.result-table{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    height:100%;
+    width: 100vh;
+    margin-top: 10px;
+}
+
 
 .done-label{
     background-color: white;

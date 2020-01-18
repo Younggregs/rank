@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Redirect } from 'react-router-dom'
-import { Row, Col, FormGroup, ControlLabel, FormControl, Alert } from 'react-bootstrap'
+import { Row, Col, FormGroup, Form, FormControl, Alert } from 'react-bootstrap'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
@@ -101,7 +101,7 @@ export default class NewRTAdmin extends React.Component {
                     <Row>
                 <Col lg={6} md={6} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Title
                         {this.state.title_err ? (
                             <span className="err-msg">
@@ -111,7 +111,7 @@ export default class NewRTAdmin extends React.Component {
                                 <div/>
                         )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       type="text"
                       id="name"
@@ -122,7 +122,7 @@ export default class NewRTAdmin extends React.Component {
          
                <Col lg={6} md={6} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Number of Contestants
                         {this.state.number_err? (
                             <span className="err-msg">
@@ -132,7 +132,7 @@ export default class NewRTAdmin extends React.Component {
                                 <div/>
                             )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       type="number"
                       id="contestants_no"
@@ -146,7 +146,7 @@ export default class NewRTAdmin extends React.Component {
             <Row>
                 <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
-                    <ControlLabel>
+                    <Form.Label>
                         <div className="form-label"> Contestants
                         {this.state.contestants_err ? (
                             <span className="err-msg">
@@ -156,7 +156,7 @@ export default class NewRTAdmin extends React.Component {
                                 <div/>
                         )}
                         </div>
-                    </ControlLabel>
+                    </Form.Label>
                     <FormControl
                       componentClass="textarea"
                       id="contestants"

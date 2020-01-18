@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import RankTankBucket from './neighborhoods/Rank Tank Bucket'
 import AdminBucket from './neighborhoods/Admin Bucket'
+import AppName from './neighborhoods/App Name'
 
 
 export default class Login extends React.Component {
@@ -12,14 +13,17 @@ export default class Login extends React.Component {
     render() {
 
         return (
+            <Container fluid="true">
+                <AppName/>   
+            
             <div className="login-bg">  
             <Row>
-                <Col lg={6} md={6} sm={12} xs={12}>
+                <Col lg={8} md={8} sm={12} xs={12}>
                 <section className="squared">
                 <div className="label">
-                        RankTank
+                    Control Room
                 </div>
-                <div className="title">Control Room</div>
+                <div className="title"></div>
 
                 <section className="link-container">
                     <Link to='/new_rank'>
@@ -28,18 +32,26 @@ export default class Login extends React.Component {
                         </div>
                     </Link>
                     <RankTankBucket />
+
+                    {/*
                     <Link to='/new_admin'>
                         <div className="link-box">
                             Create New Admin
                         </div>
                     </Link>
                     <AdminBucket />
+                    */}
+                    <Link to='/logout'>
+                        <div className="link-box">
+                            Logout
+                        </div>
+                    </Link>
                     </section>
                 </section>
                 </Col>     
             </Row>
             </div>
-
+            </Container>
     
             )
         }

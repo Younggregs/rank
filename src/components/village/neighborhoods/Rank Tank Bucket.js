@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { Row, Col, Glyphicon } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
@@ -17,13 +17,16 @@ export default class AdminBucket extends React.Component {
 
       async componentDidMount(){
 
-        this.setState({ 
-          isLoading: true
-        })
+        this.setState({ isLoading: true })
+        const auth = localStorage.getItem('auth_code')
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/my_rtlist/')
+          const res = await fetch('http://127.0.0.1:8000/api/my_rtlist/', {
+            headers : {
+              'Authorization' : 'Token ' + auth,
+            },
+          })
           const rtList = await res.json();
             this.setState({
               rtList
@@ -58,10 +61,9 @@ export default class AdminBucket extends React.Component {
                     <CardBody>
                     <div>
                       {this.state.rtList.map(item => (
-                        <Link to={`/rank/${ item.url }`}>
+                        <Link to={`/rank_result/${ item.url }`}>
                         <div className="mini-link-box">
-                            <p className="mini-t">{item.name}</p>
-                            <Glyphicon className="mini-glyph" glyph="arrow-right"/>
+                            <p className="mini-t">{item.title}</p>
                         </div>
                       </Link>
                       ))}
