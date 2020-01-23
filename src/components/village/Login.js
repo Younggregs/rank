@@ -128,7 +128,7 @@ export default class Login extends React.Component {
               <Button variant="outline-info">Signup</Button>
             </Link>
             </Col>
-            </Row>
+            </Row><br />
                     
                
             

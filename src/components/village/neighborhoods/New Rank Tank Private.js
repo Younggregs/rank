@@ -214,7 +214,7 @@ export default class NewRankTank extends React.Component {
                       componentClass="textarea"
                       id="email_list"
                       name="email_list"
-                      placeholder="eg oo@gmail.com, kola@gmail.com, simi@gmail.com"
+                      placeholder="eg oo@gmail.com, kola@gmail.com"
                       rows={3}
                     />
                   </FormGroup>

@@ -125,7 +125,7 @@ export default class Signup extends React.Component {
                         RankTank
                     </div>
                     <div className="login-box">
-                      <div className="title">Signup</div>
+                      <div className="title">Register</div>
                     
 
 
@@ -142,7 +142,7 @@ export default class Signup extends React.Component {
               <Button variant="info">Signup</Button>
             </Link>
             </Col>
-            </Row>
+            </Row><br />
 
 
 
@@ -220,10 +220,6 @@ export default class Signup extends React.Component {
             </Row>
 
             <Row className="justify-content-md-center">
-            <Col lg={6} md={6} sm={12} xs={12} id="login">
-                <p><Link to="forgot_password">Forgot Password?</Link></p>
-            </Col>
-
             <Col lg={6} md={6} sm={6} xs={6}>
                 <br />
                   <Button variant="success" onClick={this.submit.bind(this)}>Submit</Button>
