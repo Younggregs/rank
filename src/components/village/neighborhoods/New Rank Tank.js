@@ -66,7 +66,7 @@ export default class NewRankTank extends React.Component {
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/new_contest/', {
+          const res = await fetch('http://167.172.221.98:8000/api/new_contest/', {
            body : formData,
            method: 'POST',
            headers : {
@@ -79,7 +79,7 @@ export default class NewRankTank extends React.Component {
             });
           
             if(message.code){
-              const url = 'http://127.0.0.1:3000/rank/' + message.code
+              const url = 'http://167.172.221.98:3000/rank/' + message.code
               this.setState({
                 value: url, success: true
               });

@@ -6,6 +6,7 @@ import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 import lottie from 'lottie-web';
 import { login } from './auth/Auth'
+import { URL } from './utils/constants'
 
 export default class Signup extends React.Component {
 
@@ -87,7 +88,7 @@ export default class Signup extends React.Component {
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/signup/', {
+          const res = await fetch('http://167.172.221.98:8000/api/signup/', {
            body : formData,
            method: 'POST',
           })

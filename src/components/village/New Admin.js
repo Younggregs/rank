@@ -62,7 +62,7 @@ export default class Login extends React.Component {
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/signin/', {
+          const res = await fetch('http://167.172.221.98:8000/api/signin/', {
            body : formData,
            method: 'POST',
           })

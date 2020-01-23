@@ -23,7 +23,7 @@ export default class RankTitle extends React.Component {
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/rank_title/' + this.props.rank_id)
+          const res = await fetch('http://167.172.221.98:8000/api/rank_title/' + this.props.rank_id)
           const t = await res.json();
             this.setState({
                 t

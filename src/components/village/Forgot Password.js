@@ -69,7 +69,7 @@ export default class ForgotPassword extends React.Component {
 
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/api/forgot_password/', {
+          const res = await fetch('http://167.172.221.98:8000/api/forgot_password/', {
            body : formData,
            method: 'POST',
           })
