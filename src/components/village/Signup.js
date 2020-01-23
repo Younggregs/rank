@@ -40,6 +40,7 @@ export default class Signup extends React.Component {
           isLoading: true,
           email_err: false,
           password_err: false,
+          name_err: false,
         })
 
 
@@ -50,23 +51,15 @@ export default class Signup extends React.Component {
 
         var email = document.getElementById("email").value
         var password = document.getElementById("password").value
-        var firstname = document.getElementById("firstname").value
-        var lastname = document.getElementById("lastname").value
+        var name = document.getElementById("name").value
 
         if(email){
 
             if(password){
 
-                if(firstname){
+                if(name){
 
-                    if(lastname){
-
-                        proceed = true
-
-
-                    }else{
-                        this.setState({lastname: true})
-                    }
+                    proceed = true
 
                 }else{
                     this.setState({firstname_err: true})
@@ -90,8 +83,7 @@ export default class Signup extends React.Component {
   
         formData.append('email', email)
         formData.append('password', password)
-        formData.append('firstname', firstname)
-        formData.append('lastname', lastname)
+        formData.append('name', name)
 
 
         try {
@@ -133,19 +125,19 @@ export default class Signup extends React.Component {
                         RankTank
                     </div>
                     <div className="login-box">
-                      <div className="title">Login</div>
+                      <div className="title">Signup</div>
                     
 
 
 
-            <Row className="justify-content-md-center">
-            <Col lg={6} md={6} sm={12} xs={12}> 
+            <Row>
+            <Col lg={6} md={6} sm={6} xs={6}> 
             <Link to="/">
               <Button variant="outline-success">Signin</Button>
             </Link>
             </Col>
 
-            <Col lg={6} md={6} sm={12} xs={12}> 
+            <Col lg={6} md={6} sm={6} xs={6}> 
             <Link to="/signup">
               <Button variant="info">Signup</Button>
             </Link>
@@ -156,11 +148,11 @@ export default class Signup extends React.Component {
 
 
                 <Row className="justify-content-md-center">
-                <Col lg={6} md={6} sm={12} xs={12}>
+                <Col lg={12} md={12} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
                     <Form.Label>
-                        <div className="form-label"> First Name
-                        {this.state.email_err ? (
+                        <div className="form-label"> Full Name
+                        {this.state.name_err ? (
                             <span className="err-msg">
                                 **
                             </span>
@@ -170,31 +162,9 @@ export default class Signup extends React.Component {
                         </div>
                     </Form.Label>
                     <FormControl
-                      type="firstname"
-                      id="firstname"
-                      name="firstname"
-                    />
-                  </FormGroup>
-               </Col>
-         
-               <Col lg={6} md={6} sm={12} xs={12}>
-                  <FormGroup controlId="formControlsTextarea">
-                    <Form.Label>
-                        <div className="form-label"> Last Name
-                        {this.state.password_err ? (
-                            <span className="err-msg">
-                                **
-                            </span>
-                            ) : (
-                                <div/>
-                            )}
-                        </div>
-                    </Form.Label>
-                    <FormControl
-                      type="text"
-                      id="lastname"
-                      name="firstname"
-                      cols={5}
+                      type="name"
+                      id="name"
+                      name="name"
                     />
                   </FormGroup>
                </Col>
@@ -254,7 +224,7 @@ export default class Signup extends React.Component {
                 <p><Link to="forgot_password">Forgot Password?</Link></p>
             </Col>
 
-            <Col lg={6} md={6} sm={12} xs={12}>
+            <Col lg={6} md={6} sm={6} xs={6}>
                 <br />
                   <Button variant="success" onClick={this.submit.bind(this)}>Submit</Button>
                 <br />

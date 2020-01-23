@@ -117,13 +117,13 @@ export default class Login extends React.Component {
                     <div className="login-box">
                       <div className="title">Login</div>
             <Row className="justify-content-md-center">
-            <Col lg={6} md={6} sm={12} xs={12}> 
+            <Col lg={6} md={6} sm={6} xs={6}> 
             <Link to="/">
               <Button variant="success">Signin</Button>
             </Link>
             </Col>
 
-            <Col lg={6} md={6} sm={12} xs={12}> 
+            <Col lg={6} md={6} sm={6} xs={6}> 
             <Link to="/signup">
               <Button variant="outline-info">Signup</Button>
             </Link>
@@ -183,7 +183,7 @@ export default class Login extends React.Component {
                 <p><Link to="forgot_password">Forgot Password?</Link></p>
             </Col>
 
-            <Col lg={6} md={6} sm={12} xs={12}>
+            <Col lg={6} md={6} sm={6} xs={6}>
                 <br />
                   <Button variant="success" onClick={this.submit.bind(this)}>Submit</Button>
                 <br />
