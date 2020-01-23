@@ -15,14 +15,12 @@ export default class Login extends React.Component {
               <AppName/>          
               <section className="rank-bg"><br /> 
             <Row>
-                <Col lg={8} md={8} sm={12} xs={12}>
                 <section className="squared">
-                <div className="title">New RankTank Public</div>
+                <div className="label-2">New RankTank Public</div>
                 <div className="squared-box">
                     <NewRankTank />
                 </div>
-                </section>
-                </Col>     
+                </section>    
             </Row>
             </section>
             </Container>

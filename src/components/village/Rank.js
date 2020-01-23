@@ -99,9 +99,9 @@ export default class Rank extends React.Component {
                         <AppName/>   
                   <section className="rank-bg">
                   <Row>
-                  <Col lg={6} md={6} sm={12} xs={12}>
+                  <Col lg={12} md={12} sm={12} xs={12}>
                   <section className="squared">
-                        <div className="label">
+                        <div className="label-2">
                               Rank Contestants
                         </div>
                   <div className="title">Rank Contestants from highest to lowest</div>
@@ -135,8 +135,8 @@ export default class Rank extends React.Component {
                     <div></div>
               ) : (
                   <section className="squared">
-                  <Row className="justify-content-md-center">
-                  <Col lg={8} md={8} sm={12} xs={12}>
+                  <Row className="justify-content-center">
+                  <Col lg={12} md={12} sm={12} xs={12}>
                       <br />
                         <Button onClick={this.submit.bind(this)} variant="success" size="lg">Submit</Button>{' '}
                       <br />

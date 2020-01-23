@@ -17,8 +17,8 @@ export default class Login extends React.Component {
                 <AppName/>   
             
             <div className="login-bg">  
-            <Row>
-                <Col lg={8} md={8} sm={12} xs={12}>
+            <Row className="justify-content-center">
+                <Col lg={12} md={12} sm={12} xs={12}>
                 <section className="squared">
                 <div className="label">
                     Control Room

@@ -94,8 +94,8 @@ export default class RankPercentage extends React.Component {
 
                             <section>
                                
-                                <Row className="justify-content-md-center">
-                                <Col lg={4} md={4} sm={12} xs={12}>
+                                <Row className="justify-content-center">
+                                <Col lg={12} md={12} sm={12} xs={12}>
                                       <div className="done-label">
                                             <div className="checked-done" ref={ref => this.ref = ref} />
                                             <br />
@@ -103,7 +103,8 @@ export default class RankPercentage extends React.Component {
                                 </Col>
                                 </Row>
                                 
-                          
+                                <Row className="justify-content-center">
+                                <Col lg={12} md={12} sm={12} xs={12}>
                                 <div className="result-label">
                                       {this.state.cList.map(item => (
                                             <div>
@@ -112,6 +113,8 @@ export default class RankPercentage extends React.Component {
                                             </div>
                                       ))}
                                 </div>
+                                </Col>
+                                </Row>
                                
   
                                

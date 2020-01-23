@@ -121,6 +121,8 @@ export default class NewRankTank extends React.Component {
 
             return (
                 <section>
+
+                <Row className="justify-content-center">
                     <Button variant="warning" size="lg" block style={{ marginBottom: '1rem' }}>Create RankTank</Button>
 
                   <div className="button-switch">
@@ -133,8 +135,9 @@ export default class NewRankTank extends React.Component {
                     </Link>
 
                   </div>
+                </Row>
 
-                  <Row className="justify-content-md-center">
+                  <Row className="justify-content-center">
                   <Col lg={10} md={10} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
                     <Form.Label>
@@ -159,7 +162,7 @@ export default class NewRankTank extends React.Component {
             </Row>
 
 
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-center">
                 <Col lg={10} md={10} sm={12} xs={12}>
                   <FormGroup controlId="formControlsTextarea">
                     <Form.Label>
@@ -185,7 +188,7 @@ export default class NewRankTank extends React.Component {
             </Row>
 
 
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-center">
             <Col lg={10} md={10} sm={12} xs={12}>
                 <Alert key='dark' variant='dark'>
                     Note: :Seperate contestants with comma like so: : Jon, Janet, Jan
@@ -196,7 +199,7 @@ export default class NewRankTank extends React.Component {
 
 
          
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-center">
               {this.state.success ? (
                   <Col lg={4} lgOffset={4} md={4} mdOffset={4} sm={12} xs={12}>
                     <div className="checked-done" ref={ref => this.ref = ref} />
@@ -230,7 +233,7 @@ export default class NewRankTank extends React.Component {
 
 
             {this.state.message.code ? (
-                <Row className="justify-content-md-center">
+                <Row className="justify-content-center">
                  
                 <InputGroup size="lg">
                   <InputGroupAddon addonType="prepend">
