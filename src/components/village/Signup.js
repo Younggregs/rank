@@ -6,7 +6,6 @@ import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 import lottie from 'lottie-web';
 import { login } from './auth/Auth'
-import { URL } from './utils/constants'
 
 export default class Signup extends React.Component {
 
@@ -211,7 +210,7 @@ export default class Signup extends React.Component {
                         </div>
                     </Form.Label>
                     <FormControl
-                      type="text"
+                      type="password"
                       id="password"
                       name="password"
                       cols={5}

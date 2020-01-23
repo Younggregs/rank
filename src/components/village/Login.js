@@ -169,7 +169,7 @@ export default class Login extends React.Component {
                         </div>
                     </Form.Label>
                     <FormControl
-                      type="text"
+                      type="password"
                       id="password"
                       name="password"
                       cols={5}

@@ -1,2 +1,9 @@
-export const URL = process.env.API_URL;
-export const LOGIN = "http://127.0.0.1:8000/api/auth/";
+const URL = process.env.API_URL;
+const LOGIN = "http://167.172.221.98/api/auth/";
+
+// const WEBSITE = 'http://167.172.221.98'
+
+export {
+    URL,
+    LOGIN
+}
