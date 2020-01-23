@@ -1,6 +1,4 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
-import { Row, Col } from 'react-bootstrap'
+import React from 'react'
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 

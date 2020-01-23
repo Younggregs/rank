@@ -1,9 +1,6 @@
-import React, {useState} from 'react'
-import { Redirect } from 'react-router-dom'
+import React from 'react'
 import { Row, Col, FormGroup, Form, FormControl, Alert } from 'react-bootstrap'
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import Spinner from 'react-activity/lib/Spinner';
-import 'react-activity/lib/Spinner/Spinner.css';
+import { Button } from 'reactstrap';
 
 
 export default class NewRTAdmin extends React.Component {

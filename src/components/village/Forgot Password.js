@@ -1,5 +1,4 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 import { Row, Col, FormGroup, FormControl, Form } from 'react-bootstrap'
 import { Button } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';

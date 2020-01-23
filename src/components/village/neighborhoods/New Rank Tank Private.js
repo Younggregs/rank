@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { Row, Col, FormGroup, Button, Form, FormControl, Alert } from 'react-bootstrap'
 import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';

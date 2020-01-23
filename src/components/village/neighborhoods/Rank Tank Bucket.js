@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { Row, Col } from 'react-bootstrap'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import Spinner from 'react-activity/lib/Spinner';
-import 'react-activity/lib/Spinner/Spinner.css';
 
 
 export default class AdminBucket extends React.Component {
@@ -11,7 +8,7 @@ export default class AdminBucket extends React.Component {
 
     state = {
         isLoading: false,
-        rtList: [],
+        rtList: []
     }
 
 
@@ -42,6 +39,19 @@ export default class AdminBucket extends React.Component {
   
   }
 
+  isEmpty(){
+
+    var empty = false
+
+    if(this.state.rtList.length <= 0 ){
+      empty = true
+    }
+
+    return empty
+
+
+  }
+
 
 
 
@@ -59,7 +69,10 @@ export default class AdminBucket extends React.Component {
                 <Collapse isOpen={isOpen}>
                   <Card>
                     <CardBody>
-                    <div>
+                      {this.isEmpty() ? (
+                        <div><p>Its empty here, create a new ranktank</p></div>
+                      ) : (
+                        <div>
                       {this.state.rtList.map(item => (
                         <Link to={`/rank_result/${ item.url }`}>
                         <div className="mini-link-box">
@@ -68,6 +81,9 @@ export default class AdminBucket extends React.Component {
                       </Link>
                       ))}
                     </div>
+
+                      )}
+                    
                     </CardBody>
                   </Card>
                 </Collapse>

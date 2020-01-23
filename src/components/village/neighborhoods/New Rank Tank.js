@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { Row, Col, FormGroup, Form, Button, FormControl, Alert } from 'react-bootstrap'
-import { Collapse, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import Spinner from 'react-activity/lib/Spinner';
 import 'react-activity/lib/Spinner/Spinner.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';

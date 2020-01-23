@@ -1,8 +1,0 @@
-
-
-
-
-export {
-    URL,
-    WEBSITE
-}
