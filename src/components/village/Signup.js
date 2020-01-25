@@ -122,7 +122,7 @@ export default class Signup extends React.Component {
                     
 
                     <div className="label">
-                        RankTank
+                        Ranq
                     </div>
                     <div className="login-box">
                       <div className="title">Register</div>
