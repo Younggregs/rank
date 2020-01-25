@@ -6,7 +6,7 @@ export default class RankTank extends React.Component {
       render() {
             return (
                   <section>
-                      <p>RankTank</p>
+                      <p>Ranq</p>
                   </section>
 
             )

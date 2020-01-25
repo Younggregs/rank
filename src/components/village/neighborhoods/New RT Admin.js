@@ -67,7 +67,7 @@ export default class NewRTAdmin extends React.Component {
 
 
         try {
-          const res = await fetch('http://167.172.221.98:8000/api/new_contest/', {
+          const res = await fetch('http://ranq.xyz/api/new_contest/', {
            body : formData,
            method: 'POST',
           })

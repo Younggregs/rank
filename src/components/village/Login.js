@@ -78,7 +78,7 @@ export default class Login extends React.Component {
 
 
         try {
-          const res = await fetch('http://167.172.221.98:8000/api/signin/', {
+          const res = await fetch('http://ranq.xyz/api/signin/', {
            body : formData,
            method: 'POST',
           })
@@ -112,7 +112,7 @@ export default class Login extends React.Component {
                     
 
                     <div className="label">
-                        RankTank
+                        Ranq
                     </div>
                     <div className="login-box">
                       <div className="title">Login</div>

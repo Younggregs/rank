@@ -6,7 +6,7 @@ export default class AppName extends React.Component {
 
       render() {
 
-            return ( <div className="label" id="label"><Link to='/'> RankTank </Link></div> )
+            return ( <div className="label" id="label"><Link to='/'> Ranq </Link></div> )
         }
 }
 

@@ -35,7 +35,7 @@ export default class RankPolls extends React.Component {
         const auth = localStorage.getItem('auth_code')
  
     try {
-      const res = await fetch('http://167.172.221.98:8000/api/rank_result/' + this.props.rank_id + '/',{
+      const res = await fetch('http://ranq.xyz/api/rank_result/' + this.props.rank_id + '/',{
         headers : {
           'Authorization' : 'Token ' + auth,
         },

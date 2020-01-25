@@ -100,7 +100,7 @@ export default class PrivateRank extends React.Component {
                   <Col lg={6} lgOffset={3} md={6} mdOffset={3} sm={12} xs={12}>
                   <section className="squared">
                         <div className="label">
-                              RankTank
+                              Ranq
                         </div>
                   <div className="title">Rank Contestants</div>
                   <RankPrivateTitle rank_id={this.props.match.params.rank_id}/>

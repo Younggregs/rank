@@ -16,7 +16,7 @@ export default class Login extends React.Component {
               <section className="rank-bg"><br /> 
             <Row>
                 <section className="squared">
-                <div className="label-2">New RankTank Private</div>
+                <div className="label-2">New Private Ranq</div>
                 <div className="squared-box">
                     <NewRankTankPrivate />
                 </div>

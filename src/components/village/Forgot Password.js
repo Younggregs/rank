@@ -68,7 +68,7 @@ export default class ForgotPassword extends React.Component {
 
 
         try {
-          const res = await fetch('http://167.172.221.98:8000/api/forgot_password/', {
+          const res = await fetch('http://ranq.xyz/api/forgot_password/', {
            body : formData,
            method: 'POST',
           })
@@ -102,7 +102,7 @@ export default class ForgotPassword extends React.Component {
                     
 
                     <div className="label">
-                        RankTank
+                        Ranq
                     </div>
                     <div className="login-box">
                       <div className="title">Recover Password</div>

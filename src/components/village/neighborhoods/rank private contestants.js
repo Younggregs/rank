@@ -35,7 +35,7 @@ export default class RankPrivateContestants extends React.Component {
 
 
         try {
-            const res = await fetch('http://167.172.221.98:8000/api/private_rank_title/' + this.props.rank_id)
+            const res = await fetch('http://ranq.xyz/api/private_rank_title/' + this.props.rank_id)
             const title = await res.json();
               this.setState({
                   title
@@ -47,7 +47,7 @@ export default class RankPrivateContestants extends React.Component {
 
 
         try {
-          const res = await fetch('http://167.172.221.98:8000/api/rank_tanker/' + this.state.title.url)
+          const res = await fetch('http://ranq.xyz/api/rank_tanker/' + this.state.title.url)
           const contestants = await res.json();
             this.setState({
                 contestants

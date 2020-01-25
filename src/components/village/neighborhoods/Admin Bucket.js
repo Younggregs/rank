@@ -19,7 +19,7 @@ export default class AdminBucket extends React.Component {
         })
 
         try {
-          const res = await fetch('http://167.172.221.98:8000/api/my_admin/')
+          const res = await fetch('http://ranq.xyz/api/my_admin/')
           const rtList = await res.json();
             this.setState({
               rtList

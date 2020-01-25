@@ -87,7 +87,7 @@ export default class Signup extends React.Component {
 
 
         try {
-          const res = await fetch('http://167.172.221.98:8000/api/signup/', {
+          const res = await fetch('http://ranq.xyz/api/signup/', {
            body : formData,
            method: 'POST',
           })

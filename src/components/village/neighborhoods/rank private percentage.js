@@ -45,7 +45,7 @@ export default class RankPrivatePercentage extends React.Component {
         }
  
     try {
-      const res = await fetch('http://167.172.221.98:8000/api/rank_private_vote/' + this.props.rank_id + '/', {
+      const res = await fetch('http://ranq.xyz/api/rank_private_vote/' + this.props.rank_id + '/', {
        method: 'POST',
        headers: {
         'Accept': 'application/json',

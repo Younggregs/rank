@@ -20,7 +20,7 @@ export default class Welcome extends React.Component {
     else{
 
       try {
-        const res = await fetch('http://167.172.221.98:8000/api/isloggedin/', {
+        const res = await fetch('http://ranq.xyz/api/isloggedin/', {
 
         credentials: 'same-origin',
         mode: 'cors',
