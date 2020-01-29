@@ -81,7 +81,7 @@ export default class RankPolls extends React.Component {
 
                             <section>
                                
-                                <Row className="justify-content-md-center">
+                                <Row className="justify-content-center">
                                 <Col lg={4} md={4} sm={12} xs={12}>
                                       <div className="done-label">
                                             <div className="checked-done" ref={ref => this.ref = ref} />
@@ -91,7 +91,7 @@ export default class RankPolls extends React.Component {
                                 </Row>
                                 
                                 <Row>
-                                <Col lg={6} md={6} sm={12} xs={12}>
+                                <Col lg={12} md={12} sm={12} xs={12}>
                                 <div className="result-label">
                                       {this.state.cList.map(item => (
                                             <div>

@@ -116,7 +116,7 @@ export default class Login extends React.Component {
                     </div>
                     <div className="login-box">
                       <div className="title">Login</div>
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-center">
             <Col lg={6} md={6} sm={6} xs={6}> 
             <Link to="/">
               <Button variant="success">Signin</Button>

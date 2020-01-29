@@ -21,10 +21,10 @@ export default class Rank extends React.Component {
                   <Container fluid="true">
                         <AppName/>   
                   <section className="rank-bg">
-                  <Row>
-                  <Col lg={6} md={6} sm={12} xs={12}>
+                  <Row className="justify-content-center">
+                  <Col lg={8} md={8} sm={12} xs={12}>
                   <section className="squared">
-                        <div className="label">
+                        <div className="label-2">
                               Rank Polls
                         </div>
                   <div className="title">Realtime Result of Polls</div>

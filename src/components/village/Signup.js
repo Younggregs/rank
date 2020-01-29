@@ -130,7 +130,7 @@ export default class Signup extends React.Component {
 
 
 
-            <Row>
+            <Row className="justify-content-center">
             <Col lg={6} md={6} sm={6} xs={6}> 
             <Link to="/">
               <Button variant="outline-success">Signin</Button>
@@ -219,7 +219,7 @@ export default class Signup extends React.Component {
                </Col>
             </Row>
 
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-center">
             <Col lg={6} md={6} sm={6} xs={6}>
                 <br />
                   <Button variant="success" onClick={this.submit.bind(this)}>Submit</Button>
