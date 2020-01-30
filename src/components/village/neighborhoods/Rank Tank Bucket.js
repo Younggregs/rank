@@ -46,6 +46,10 @@ export default class AdminBucket extends React.Component {
     if(this.state.rtList.length <= 0 ){
       empty = true
     }
+    
+    if(this.state.rtList){
+      empty = true
+    }
 
     return empty
 
