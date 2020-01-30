@@ -20,6 +20,7 @@ export default class Login extends React.Component {
             <Row className="justify-content-center">
                 <Col lg={12} md={12} sm={12} xs={12}>
                 <section className="squared">
+                <div className="squared-box">
                 <div className="label-2">
                     Control Room
                 </div>
@@ -47,6 +48,8 @@ export default class Login extends React.Component {
                         </div>
                     </Link>
                     </section>
+
+                </div>
                 </section>
                 </Col>     
             </Row>
